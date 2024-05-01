@@ -1,0 +1,536 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior:smooth;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    text-transform: capitalize;
+    font-family: 'Outfit', sans-serif;
+}
+:root{
+    --main-color: #4c4d4f;
+    --main-color2: #141723;
+    --numbers-color: #be9d7a;
+    --font-color:#bf9e7b;
+    --book-color:#4c4d4f;
+--main-duration: 0.5s;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+    width: 750px;
+    }
+}
+  /* Medium */
+@media (min-width: 992px) {
+    .container {
+    width: 970px;
+    }
+}
+  /* Large */
+@media (min-width: 1200px) {
+    .container {
+    width: 1170px;
+    }
+}
+h1f{
+    font-family: "Yesteryear", cursive;
+    font-weight: bold;
+    font-style: italic;
+
+    font-family: "Raleway", sans-serif;
+
+
+    font-style: normal;
+
+    font-family: "Vollkorn", serif;
+}
+/* start header */
+.header{
+    position: absolute;
+    padding-top: 15px;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    font-family: "Vollkorn", serif;
+}
+.header  .container::after{
+    content: "";
+    position: absolute;
+    width: calc(100% - 30px);
+    border-bottom: 2px solid rgb(247, 243, 243);
+    bottom: 0;
+}
+.header  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+@media (max-width: 768px){
+    .header .container{
+        flex-direction: column;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    .list li{
+        padding:0 8px !important;
+    }
+    ul {
+        padding: 0;
+    }
+    .landing .text h1{
+        font-size: 50px !important;
+    }
+}
+.logo img{
+    width: 170px;
+}
+.list ul{
+    display: flex;
+}
+.list li{
+    padding: 0 20px;
+}
+.list a{
+    color: whitesmoke;
+}
+/* landing */
+.landing{
+background-image: url(../imgs/19744.jpg);
+height: 100vh;
+background-size: cover;
+background-position: center center;
+
+}
+.overlay{
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+.landing .text {
+    position: absolute;
+    top:40%;
+}
+.landing .content{
+        margin: auto !important;
+}
+.landing .text h1{
+    font-size: 70px;
+    font-family: "Yesteryear", cursive;
+    color: var(--font-color);
+    font-weight: normal;
+    margin-bottom: 0;
+}
+.landing .text p{
+    color: whitesmoke;
+    font-size: 22px;
+    opacity: 90%;
+    font-family: "Vollkorn", serif;
+    font-style:italic;
+    letter-spacing: 5px;
+}
+
+q{
+    width: 150px;
+    height: 150px;
+    color: wheat;
+}
+/* landing */
+/* about us section */
+
+.about .container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 40%;
+    max-width: 100%;
+    justify-content: space-between;
+    max-height: 88vh;
+}
+@media (max-width: 1000px){
+    
+    .about .container{
+        justify-content: center;
+        align-items: center;
+    }
+    .right {
+        flex-basis: auto !important; /* Resetting flex-basis to default */
+        position: static !important; /* Resetting position to default */
+        top: auto !important; /* Resetting top to default */
+        z-index: auto !important; /* Resetting z-index to default */
+    }
+    .left{
+        flex-basis: 100% !important;
+    }
+    .about .container{
+        max-height: none;
+        margin-bottom: 40px;
+    }
+}
+@media (max-height: 805px){
+    .right{
+        position: static !important;
+        top: 1500px !important;
+    }
+}
+.about .left img{
+    width: 100px;
+}
+.left{
+    text-align: center;
+}
+.left p{
+    line-height: 200%;
+color: #777;
+    letter-spacing: 1px;
+}
+.left h2{
+    color: var(--font-color);
+    font-family: "Yesteryear", cursive;
+    font-weight: 400;
+font-size: 70px;
+}
+.left{
+    flex-basis: 45%;
+    max-height: 88vh;
+}
+.right{
+    flex-basis:40%;
+    position: relative;
+    top: -330px;
+    z-index: 26;
+
+}
+.info{
+    margin-bottom: 25px;
+}
+.right .info{
+    background-color: var(--main-color2);
+    color: whitesmoke;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.text22{
+    padding: 20px;
+    width: calc(100% - 50px);
+    
+}
+.right img{
+    max-width: 100%;
+}
+.info h2{
+    color: var(--font-color);
+    font-weight: 300;
+    font-family: "Vollkorn", serif;
+    font-size: 35px;
+}
+.info p{
+    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+    color: whitesmoke;
+    letter-spacing: 1.2px;
+}
+.info h3{
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+}
+.info span{
+    border-bottom:1px solid;
+    padding-bottom: 5px;
+    color: var(--font-color);
+    cursor: pointer;
+}
+.text22 p:nth-child(7),
+.text22 p:nth-child(8)
+{
+    font-family: "Raleway", sans-serif;
+    
+}
+.right button,
+.con button{
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid var(--font-color);
+    color: whitesmoke;
+    text-align: center;
+    cursor: pointer;
+}
+.right i{
+    margin-left: 5px;
+}
+.right form{
+    display: flex ;
+    justify-content: center;
+    margin: 20px 0;
+}
+/* about us section */
+/* sec2 */
+.sec2{
+    background-image: url(../imgs/2148921280.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.main-text {
+    text-align: center;
+}
+.main-text h1{
+    padding-top:35px ;
+    color: whitesmoke;
+    font-size: 50px;
+    font-family: "Yesteryear", cursive;
+}
+.main-text p{
+    color: rgb(199, 197, 197);
+    margin-bottom: 40px;
+}
+.pics-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    gap: 20px; /* Adjust the gap between items as needed */
+    padding-bottom: 40px;
+}
+@media (max-width: 450px){
+    .pics-container{
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .header li{
+        padding: 0 3px !important;
+    }
+}
+
+.pics img{
+    width: 100%;
+}
+.pics {
+    position: relative;
+    
+}
+.pics p{
+    background-color: var(--main-color2);
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    color:var(--font-color) ;
+
+}
+.pics span{
+    position:relative;
+top: -20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+/* menu */
+.menu{
+    background-color: var(--main-color2);
+    color: whitesmoke;
+}
+.main-text1 {
+    text-align: center;
+}
+.main-text1 h1{
+    margin-top: 0;
+    padding-top:35px ;
+    color: var(--font-color);
+    font-size: 50px;
+    font-family: "Yesteryear", cursive;
+}
+.main-text1 p{
+    color: rgb(199, 197, 197);
+    margin-bottom: 40px;
+}
+.main-text1 h3{
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: italic;
+    color: var(--font-color);
+    letter-spacing: 10px;
+}
+.menu .food{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 0px 45px;
+}
+@media (max-width: 768px){
+.food{
+    grid-template-columns: repeat(auto-fill, minmax(200px, auto)) !important;}
+    .desserts h3{
+        font-size:30px !important;
+    }
+    .main-text1 h3{
+        font-size: 30px !important ;
+    }
+}
+
+.desserts h3{
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: italic;
+    color: var(--font-color);
+    text-align: center;
+    letter-spacing: 10px;
+}
+.menu h2{
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+}
+.menu p{
+    font-family: "Vollkorn", serif;
+    font-weight: 100;
+    color:#909296;
+}
+.menu button,
+.book button{
+    padding: 15px 55px;
+    background-color:var(--numbers-color);
+    border: 1px solid var(--font-color);
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.menu form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.menu span{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-family: "Raleway", sans-serif;
+    color:var(--font-color);
+    font-weight: 600;
+}
+.book{
+background-image: url(../imgs/pexels-chanwalrus-941861.jpg);
+background-size: cover;
+background-position: bottom center;
+
+}
+.book form{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 0 40px;
+
+}
+form .b1{
+    text-transform: uppercase;
+    color: whitesmoke;
+    font-family: "Raleway", sans-serif;
+}
+.book .container{
+    padding: 150px 0;
+}
+.book input{
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    height: 50px;
+    opacity: 30%;
+}
+.book input:hover{
+    opacity: 100%;
+}
+.texte {
+    text-align: center;
+}
+.texte h1{
+    margin-top: 0;
+    padding-top:35px ;
+    color: whitesmoke;
+    font-size: 50px;
+    font-family: "Yesteryear", cursive;
+}
+.texte p{
+    color: rgb(199, 197, 197);
+    margin-bottom: 40px;}
+
+.book form input:nth-child(8){
+    grid-column: span 2;
+    color: red;
+}
+.b1x {
+    text-align: center;
+    margin-top: 50px;
+}
+/* footer */
+.footer{
+    background-color: var(--main-color2);
+padding: 25px 0 50px;
+background-image: url(../imgs/14645816_5505524.jpg);
+background-position:   center center ;
+background-size:cover;
+
+}
+.footer .con{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap:20px 20px;
+    
+}
+@media (max-width: 768px){
+    .a1{
+        text-align: center;
+    }
+    .footer{
+        background-image: url(../imgs/14645816_5505524.jpg);
+background-position:  center center ;
+background-size:cover;
+    }
+}
+.con h3{
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: whitesmoke;
+}
+.con p{
+    font-family: "Vollkorn", serif;
+    color: whitesmoke;
+}
+.con i{
+    padding: 15px;
+    border:1px solid var(--font-color);
+    margin-right: 20px;
+    font-size: 20px;
+}
+.con button{
+    width:50%;
+    max-height: 100%;
+}
+.ii{
+    margin-top: 0;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
